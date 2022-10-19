@@ -73,6 +73,11 @@ extension WeatherCityListViewController: UITableViewDataSource, UITableViewDeleg
 	
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
-		// TODO: - push details controller
+		let storyBoard = UIStoryboard(name: "Weather", bundle: nil)
+		if let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WeatherCityDetailsViewController") as? WeatherCityDetailsViewController {
+			nextViewController.city = self.cityList[indexPath.row]
+			self.navigationController?.pushViewController(nextViewController, animated: true)
+			
+		}
 	}
 }

@@ -40,6 +40,21 @@
             </objects>
             <point key="canvasLocation" x="1006.1538461538461" y="3.5545023696682461"/>
         </scene>
+        <!--Weather City Details View Controller-->
+        <scene sceneID="SRr-vB-KcR">
+            <objects>
+                <viewController storyboardIdentifier="WeatherCityDetailsViewController" id="Wjo-sJ-ggU" customClass="WeatherCityDetailsViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QbO-D5-hau">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="KqE-3M-CuF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SFX-Cz-EVX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="370"/>
+        </scene>
         <!--Weather Add City View Controller-->
         <scene sceneID="q3k-DX-vHy">
             <objects>
