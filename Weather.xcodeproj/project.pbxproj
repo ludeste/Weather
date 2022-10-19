@@ -19,6 +19,7 @@
 		516E62FB28FFEC290068E418 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E62FA28FFEC290068E418 /* UserDefaultsManager.swift */; };
 		516E62FD28FFEC4A0068E418 /* CLLocation+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E62FC28FFEC4A0068E418 /* CLLocation+Codable.swift */; };
 		516E62FF28FFEC620068E418 /* WeatherWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E62FE28FFEC620068E418 /* WeatherWorker.swift */; };
+		516E630228FFFBF30068E418 /* WeatherCityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E630128FFFBF30068E418 /* WeatherCityResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		516E62FA28FFEC290068E418 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		516E62FC28FFEC4A0068E418 /* CLLocation+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Codable.swift"; sourceTree = "<group>"; };
 		516E62FE28FFEC620068E418 /* WeatherWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWorker.swift; sourceTree = "<group>"; };
+		516E630128FFFBF30068E418 /* WeatherCityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCityResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 		516E62F328FFEB6B0068E418 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				516E630028FFFBE00068E418 /* Response */,
 				516E62F728FFEB980068E418 /* Worker */,
 				516E62F528FFEB820068E418 /* Weather */,
 			);
@@ -209,6 +212,14 @@
 				516E62FE28FFEC620068E418 /* WeatherWorker.swift */,
 			);
 			path = Worker;
+			sourceTree = "<group>";
+		};
+		516E630028FFFBE00068E418 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				516E630128FFFBF30068E418 /* WeatherCityResponse.swift */,
+			);
+			path = Response;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				516E630228FFFBF30068E418 /* WeatherCityResponse.swift in Sources */,
 				516E62FF28FFEC620068E418 /* WeatherWorker.swift in Sources */,
 				516E62FD28FFEC4A0068E418 /* CLLocation+Codable.swift in Sources */,
 				516E62FB28FFEC290068E418 /* UserDefaultsManager.swift in Sources */,
