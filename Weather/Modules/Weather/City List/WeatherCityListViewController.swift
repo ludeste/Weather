@@ -6,12 +6,61 @@
 //
 
 import UIKit
+import MapKit
 
 class WeatherCityListViewController: UIViewController {
-
+	
+	// MARK: - Outlets
+	@IBOutlet private weak var tableView: UITableView! {
+		didSet {
+			self.tableView.delegate = self
+			self.tableView.dataSource = self
+		}
+	}
+	
+	// MARK: - View Life Cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+		
+		self.title = "Villes"
+		self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(addTapped))
+		
+		self.updateList()
+		// TODO: - Notif
+	}
+	
+	// MARK: - Utils
+	private func updateList() {
+		// TODO: - sort list
+		self.tableView.reloadData()
+	}
+	
+	// MARK: - Actions
+	@objc private func addTapped() {
+		// TODO: - Push addController
 	}
 }
 
+// MARK: - UITableViewDelegate
+extension WeatherCityListViewController: UITableViewDataSource, UITableViewDelegate {
+	
+	func numberOfSections(in tableView: UITableView) -> Int {
+		1
+	}
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		// TODO: - change
+		0
+	}
+	
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		
+		let cell = UITableViewCell(style: .value1, reuseIdentifier: "Cell")
+		return cell
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		
+		// TODO: - push details controller
+	}
+}
