@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import DataKit
 
 class WeatherCityListViewController: UIViewController {
 	
@@ -18,12 +19,18 @@ class WeatherCityListViewController: UIViewController {
 		}
 	}
 	
+	// MARK: - Variables
+	var cityList: [WeatherCity] = []
+	
 	// MARK: - View Life Cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
 		self.title = "Villes"
 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(addTapped))
+		
+		// TODO: - remove
+		self.cityList = [WeatherCity(title: "test", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))]
 		
 		self.updateList()
 		// TODO: - Notif
@@ -49,13 +56,14 @@ extension WeatherCityListViewController: UITableViewDataSource, UITableViewDeleg
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		// TODO: - change
-		0
+		self.cityList.count
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		
 		let cell = UITableViewCell(style: .value1, reuseIdentifier: "Cell")
+		cell.textLabel?.text = self.cityList[indexPath.row].title
+		cell.selectionStyle = .none
 		return cell
 	}
 	
