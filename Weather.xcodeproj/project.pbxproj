@@ -22,6 +22,8 @@
 		516E630228FFFBF30068E418 /* WeatherCityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E630128FFFBF30068E418 /* WeatherCityResponse.swift */; };
 		516E6305290013BD0068E418 /* WeatherAddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E6304290013BD0068E418 /* WeatherAddCityViewController.swift */; };
 		516E630829001CF60068E418 /* WeatherCityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E630729001CF60068E418 /* WeatherCityDetailsViewController.swift */; };
+		516E630C290020560068E418 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E630B290020560068E418 /* Notification+Name.swift */; };
+		516E630E290020640068E418 /* NotificationCenter+Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E630D290020640068E418 /* NotificationCenter+Observers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		516E630128FFFBF30068E418 /* WeatherCityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCityResponse.swift; sourceTree = "<group>"; };
 		516E6304290013BD0068E418 /* WeatherAddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAddCityViewController.swift; sourceTree = "<group>"; };
 		516E630729001CF60068E418 /* WeatherCityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCityDetailsViewController.swift; sourceTree = "<group>"; };
+		516E630B290020560068E418 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
+		516E630D290020640068E418 /* NotificationCenter+Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Observers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +139,7 @@
 		516E628628FFDF3A0068E418 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				516E63092900203B0068E418 /* Extension */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -242,6 +247,23 @@
 				516E630729001CF60068E418 /* WeatherCityDetailsViewController.swift */,
 			);
 			path = "City Details";
+			sourceTree = "<group>";
+		};
+		516E63092900203B0068E418 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				516E630A290020430068E418 /* Notification */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		516E630A290020430068E418 /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				516E630B290020560068E418 /* Notification+Name.swift */,
+				516E630D290020640068E418 /* NotificationCenter+Observers.swift */,
+			);
+			path = Notification;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,7 +381,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				516E627528FFDE1C0068E418 /* WeatherCityListViewController.swift in Sources */,
+				516E630E290020640068E418 /* NotificationCenter+Observers.swift in Sources */,
 				516E6305290013BD0068E418 /* WeatherAddCityViewController.swift in Sources */,
+				516E630C290020560068E418 /* Notification+Name.swift in Sources */,
 				516E627128FFDE1C0068E418 /* AppDelegate.swift in Sources */,
 				516E630829001CF60068E418 /* WeatherCityDetailsViewController.swift in Sources */,
 			);
