@@ -10,6 +10,14 @@ import DataKit
 
 class WeatherCityDetailsViewController: UIViewController {
 	
+	// MARK: - Outlets
+	@IBOutlet private weak var imageContainer: UIView!
+	@IBOutlet private weak var imageView: UIImageView!
+	@IBOutlet private weak var cityLabel: UILabel!
+	@IBOutlet private weak var temperatureLabel: UILabel!
+	@IBOutlet private weak var feelingLabel: UILabel!
+	@IBOutlet private weak var humidityLabel: UILabel!
+	
 	// MARK: - Variables
 	private var worker = WeatherWorker()
 	
@@ -19,5 +27,23 @@ class WeatherCityDetailsViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		self.worker.getWeather(for: self.city) { [weak self] response in
+			DispatchQueue.main.async {
+				self?.updateUI(weatherInfo: response)
+			}
+		}
+	}
+	
+	// MARK: - Utils
+	private func updateUI(weatherInfo: WeatherCityResponse) {
+		
+		let weatherImage = UIImage(named: weatherInfo.weather.first?.icon ?? "")
+		
+		self.imageContainer.isHidden = weatherImage == nil
+		self.imageView.image = weatherImage
+		self.cityLabel.text = city?.title ?? ""
+		self.temperatureLabel.text = "Température \(weatherInfo.main.temp)°C\n min: \(weatherInfo.main.tempMin)°C, max: \(weatherInfo.main.tempMax)°C"
+		self.feelingLabel.text = "Ressenti \(weatherInfo.main.feelsLike)°C"
+		self.humidityLabel.text = "Humidité \(weatherInfo.main.humidity)%"
 	}
 }
