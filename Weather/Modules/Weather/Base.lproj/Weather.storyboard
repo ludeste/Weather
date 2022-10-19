@@ -40,6 +40,36 @@
             </objects>
             <point key="canvasLocation" x="1006.1538461538461" y="3.5545023696682461"/>
         </scene>
+        <!--Weather Add City View Controller-->
+        <scene sceneID="q3k-DX-vHy">
+            <objects>
+                <viewController storyboardIdentifier="WeatherAddCityViewController" id="Lhq-n8-ajj" customClass="WeatherAddCityViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A64-Sl-0jJ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Lns-ea-y3M">
+                                <rect key="frame" x="0.0" y="47" width="390" height="797"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="E0D-ys-Yna"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E0D-ys-Yna" firstAttribute="trailing" secondItem="Lns-ea-y3M" secondAttribute="trailing" id="BST-rA-hp7"/>
+                            <constraint firstAttribute="bottom" secondItem="Lns-ea-y3M" secondAttribute="bottom" id="Rr8-a3-QqW"/>
+                            <constraint firstItem="Lns-ea-y3M" firstAttribute="top" secondItem="E0D-ys-Yna" secondAttribute="top" id="Tm1-uh-uvQ"/>
+                            <constraint firstItem="Lns-ea-y3M" firstAttribute="leading" secondItem="E0D-ys-Yna" secondAttribute="leading" id="hjT-1b-dqd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Lns-ea-y3M" id="Fke-pK-wuH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdC-af-TnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="-352"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="DpG-lB-A8k">
             <objects>

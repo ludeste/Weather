@@ -44,7 +44,11 @@ class WeatherCityListViewController: UIViewController {
 	
 	// MARK: - Actions
 	@objc private func addTapped() {
-		// TODO: - Push addController
+		let storyBoard = UIStoryboard(name: "Weather", bundle: nil)
+		if let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WeatherAddCityViewController") as? WeatherAddCityViewController {
+			self.navigationController?.pushViewController(nextViewController, animated: true)
+			
+		}
 	}
 }
 

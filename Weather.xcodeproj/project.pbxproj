@@ -20,6 +20,7 @@
 		516E62FD28FFEC4A0068E418 /* CLLocation+Codable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E62FC28FFEC4A0068E418 /* CLLocation+Codable.swift */; };
 		516E62FF28FFEC620068E418 /* WeatherWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E62FE28FFEC620068E418 /* WeatherWorker.swift */; };
 		516E630228FFFBF30068E418 /* WeatherCityResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E630128FFFBF30068E418 /* WeatherCityResponse.swift */; };
+		516E6305290013BD0068E418 /* WeatherAddCityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E6304290013BD0068E418 /* WeatherAddCityViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		516E62FC28FFEC4A0068E418 /* CLLocation+Codable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocation+Codable.swift"; sourceTree = "<group>"; };
 		516E62FE28FFEC620068E418 /* WeatherWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherWorker.swift; sourceTree = "<group>"; };
 		516E630128FFFBF30068E418 /* WeatherCityResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCityResponse.swift; sourceTree = "<group>"; };
+		516E6304290013BD0068E418 /* WeatherAddCityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAddCityViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				516E628928FFDF860068E418 /* City List */,
+				516E6303290013A20068E418 /* Add City */,
 				516E627628FFDE1C0068E418 /* Weather.storyboard */,
 			);
 			path = Weather;
@@ -220,6 +223,14 @@
 				516E630128FFFBF30068E418 /* WeatherCityResponse.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		516E6303290013A20068E418 /* Add City */ = {
+			isa = PBXGroup;
+			children = (
+				516E6304290013BD0068E418 /* WeatherAddCityViewController.swift */,
+			);
+			path = "Add City";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				516E627528FFDE1C0068E418 /* WeatherCityListViewController.swift in Sources */,
+				516E6305290013BD0068E418 /* WeatherAddCityViewController.swift in Sources */,
 				516E627128FFDE1C0068E418 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
