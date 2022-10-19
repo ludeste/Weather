@@ -25,20 +25,19 @@ class WeatherCityListViewController: UIViewController {
 	// MARK: - View Life Cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		
+
 		self.title = "Villes"
 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(addTapped))
 		
-		// TODO: - remove
-		self.cityList = [WeatherCity(title: "test", coordinate: CLLocationCoordinate2D(latitude: 0, longitude: 0))]
-		
 		self.updateList()
-		// TODO: - Notif
+		NotificationCenter.default.addObservers(.cityList) { [self] _ in
+			self.updateList()
+		}
 	}
 	
 	// MARK: - Utils
 	private func updateList() {
-		// TODO: - sort list
+		self.cityList = UserDefaultsManager.shared.cityList.sorted { $0.title < $1.title }
 		self.tableView.reloadData()
 	}
 	
@@ -60,6 +59,7 @@ extension WeatherCityListViewController: UITableViewDataSource, UITableViewDeleg
 	}
 	
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		
 		self.cityList.count
 	}
 	

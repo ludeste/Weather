@@ -24,6 +24,7 @@
 		516E630829001CF60068E418 /* WeatherCityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E630729001CF60068E418 /* WeatherCityDetailsViewController.swift */; };
 		516E630C290020560068E418 /* Notification+Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E630B290020560068E418 /* Notification+Name.swift */; };
 		516E630E290020640068E418 /* NotificationCenter+Observers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E630D290020640068E418 /* NotificationCenter+Observers.swift */; };
+		516E6311290035690068E418 /* String+HighLight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 516E6310290035690068E418 /* String+HighLight.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		516E630729001CF60068E418 /* WeatherCityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCityDetailsViewController.swift; sourceTree = "<group>"; };
 		516E630B290020560068E418 /* Notification+Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Name.swift"; sourceTree = "<group>"; };
 		516E630D290020640068E418 /* NotificationCenter+Observers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Observers.swift"; sourceTree = "<group>"; };
+		516E6310290035690068E418 /* String+HighLight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HighLight.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 		516E63092900203B0068E418 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				516E630F2900354D0068E418 /* String */,
 				516E630A290020430068E418 /* Notification */,
 			);
 			path = Extension;
@@ -264,6 +267,14 @@
 				516E630D290020640068E418 /* NotificationCenter+Observers.swift */,
 			);
 			path = Notification;
+			sourceTree = "<group>";
+		};
+		516E630F2900354D0068E418 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				516E6310290035690068E418 /* String+HighLight.swift */,
+			);
+			path = String;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,6 +397,7 @@
 				516E630C290020560068E418 /* Notification+Name.swift in Sources */,
 				516E627128FFDE1C0068E418 /* AppDelegate.swift in Sources */,
 				516E630829001CF60068E418 /* WeatherCityDetailsViewController.swift in Sources */,
+				516E6311290035690068E418 /* String+HighLight.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
