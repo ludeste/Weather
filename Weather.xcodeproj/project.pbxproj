@@ -177,9 +177,9 @@
 		516E62E828FFEB370068E418 /* DataKit */ = {
 			isa = PBXGroup;
 			children = (
+				516E630028FFFBE00068E418 /* Response */,
 				516E62F328FFEB6B0068E418 /* Data */,
 				516E62F628FFEB920068E418 /* Helpers */,
-				516E62F428FFEB740068E418 /* Response */,
 				516E62E928FFEB370068E418 /* DataKit.h */,
 			);
 			path = DataKit;
@@ -188,18 +188,10 @@
 		516E62F328FFEB6B0068E418 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				516E630028FFFBE00068E418 /* Response */,
 				516E62F728FFEB980068E418 /* Worker */,
 				516E62F528FFEB820068E418 /* Weather */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		516E62F428FFEB740068E418 /* Response */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Response;
 			sourceTree = "<group>";
 		};
 		516E62F528FFEB820068E418 /* Weather */ = {
@@ -299,6 +291,7 @@
 				516E626A28FFDE1C0068E418 /* Frameworks */,
 				516E626B28FFDE1C0068E418 /* Resources */,
 				516E62EF28FFEB370068E418 /* Embed Frameworks */,
+				516E6312290140010068E418 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -385,6 +378,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		516E6312290140010068E418 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		516E626928FFDE1C0068E418 /* Sources */ = {

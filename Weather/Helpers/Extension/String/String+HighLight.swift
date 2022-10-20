@@ -14,7 +14,7 @@ extension String {
 		let attributedText = NSMutableAttributedString(string: self)
 		attributedText.addAttribute(NSAttributedString.Key.font,
 									value: UIFont.systemFont(ofSize: size),
-									range:NSMakeRange(0, self.count))
+									range: NSMakeRange(0, self.count))
 
 		for value in range {
 			attributedText.addAttribute(NSAttributedString.Key.font,
@@ -23,6 +23,5 @@ extension String {
 		}
 		
 		return attributedText
-		
 	}
 }

@@ -25,7 +25,7 @@ class WeatherCityListViewController: UIViewController {
 	// MARK: - View Life Cycle
 	override func viewDidLoad() {
 		super.viewDidLoad()
-
+		
 		self.title = "Villes"
 		self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(addTapped))
 		
@@ -42,11 +42,12 @@ class WeatherCityListViewController: UIViewController {
 	}
 	
 	// MARK: - Actions
-	@objc private func addTapped() {
+	@objc
+	private func addTapped() {
 		let storyBoard = UIStoryboard(name: "Weather", bundle: nil)
-		if let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WeatherAddCityViewController") as? WeatherAddCityViewController {
+		if let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WeatherAddCityViewController")
+			as? WeatherAddCityViewController {
 			self.navigationController?.pushViewController(nextViewController, animated: true)
-			
 		}
 	}
 }
@@ -74,10 +75,10 @@ extension WeatherCityListViewController: UITableViewDataSource, UITableViewDeleg
 	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		
 		let storyBoard = UIStoryboard(name: "Weather", bundle: nil)
-		if let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WeatherCityDetailsViewController") as? WeatherCityDetailsViewController {
+		if let nextViewController = storyBoard.instantiateViewController(withIdentifier: "WeatherCityDetailsViewController")
+			as? WeatherCityDetailsViewController {
 			nextViewController.city = self.cityList[indexPath.row]
 			self.navigationController?.pushViewController(nextViewController, animated: true)
-			
 		}
 	}
 }

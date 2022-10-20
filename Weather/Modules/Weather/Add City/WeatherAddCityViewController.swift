@@ -120,13 +120,12 @@ extension WeatherAddCityViewController: UITableViewDelegate, UITableViewDataSour
 		let completion = results[indexPath.row]
 		let searchRequest = MKLocalSearch.Request(completion: completion)
 		let search = MKLocalSearch(request: searchRequest)
-		search.start { (response, error) in
+		search.start { response, _ in
 			if let coordinate = response?.mapItems[0].placemark.coordinate {
 				
-				self.cityList = UserDefaultsManager.shared.cityList.symmetricDifference([WeatherCity(title: completion.title, coordinate: coordinate)])
+				self.cityList = UserDefaultsManager.shared.cityList
+					.symmetricDifference([WeatherCity(title: completion.title, coordinate: coordinate)])
 			}
-
 		}
-		
 	}
 }
